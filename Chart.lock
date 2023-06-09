@@ -1,0 +1,9 @@
+dependencies:
+- name: ibm-sch
+  repository: https://charts.cloudnativetoolkit.dev
+  version: 1.2.19
+- name: ibm-ssp-cm
+  repository: https://raw.githubusercontent.com/IBM/charts/master/repo/ibm-helm
+  version: 1.2.8
+digest: sha256:9d44c11dd710aa23880bb8c5df5e4497cb9e689df0b92604847f161be9c3deaf
+generated: "2023-06-08T16:18:45.883954-04:00"
