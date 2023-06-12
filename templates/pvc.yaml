@@ -10,5 +10,5 @@ spec:
     requests:
       storage: 2Gi
   # storageClassName: {{ index .Values "ibm-ssp-cm" "persistentVolume" "storageClassName" | quote}}
-  storageClassName: {{ .Values.storageClassName }}
+  storageClassName: {{ index .Values "ibm-ssp-cm" "persistentVolume" "storageClassName" | quote }}
   volumeMode: Filesystem

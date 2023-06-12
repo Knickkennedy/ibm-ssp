@@ -1,5 +1,4 @@
-namespace: "fanniemae"
-storageClassName: ibmc-vpc-block-10iops-tier
+namespace: "ssp"
 
 ibm-ssp-cm:
   # Default values for IBM® Sterling Secure Proxy - Configuration Manager for Linux Helm Chart a.k.a IBM Certified Container Software (IBMCCS).
@@ -66,7 +65,7 @@ ibm-ssp-cm:
     # Specify this to use selector label value for PV-PVC bind
     labelValue: "ssp-cm-pv"
     # Specify this to set storage class name
-    storageClassName: "ocs-storagecluster-cephfs"
+    storageClassName: "ibmc-file-bronze-gid"
     # Specify this to set PVC size
     size: 2Gi
     # Specify this to set access mode
@@ -74,9 +73,9 @@ ibm-ssp-cm:
     
   # Manage Storage permission 
   storageSecurity:
-    fsGroup: 65534
+    fsGroup: 65531
     # Replace supplementalGroup Id with NFS User's groupId if the root squash is enabled on NFS server otherwise container will be failed
-    supplementalGroups: [65534]
+    supplementalGroups: [65531]
     
   # Specify these fields for Services
   service:
