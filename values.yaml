@@ -61,11 +61,11 @@ ibm-ssp-cm:
     # Specify the existing PV claim name to be used for deployment
     existingClaimName: "ssp-cm-pvc"
     # Specify this to use selector label name for PV-PVC bind
-    labelName: "app.kubernetes.io/name"
+    labelName: ""
     # Specify this to use selector label value for PV-PVC bind
-    labelValue: "ssp-cm-pv"
+    labelValue: ""
     # Specify this to set storage class name
-    storageClassName: "ibmc-file-bronze-gid"
+    storageClassName: "ibmc-file-gold-gid"
     # Specify this to set PVC size
     size: 2Gi
     # Specify this to set access mode
@@ -131,12 +131,12 @@ ibm-ssp-cm:
   ## Container Memory - limit and request both are set 2 GB as default value but we can modify as per the requirement.
   resources:
     limits:
-      cpu: 1000m
-      memory: 2Gi
+      cpu: 2000m
+      memory: 4Gi
       ephemeral-storage: "5Gi"
     requests:
-      cpu: 1000m
-      memory: 2Gi
+      cpu: 2000m
+      memory: 4Gi
       ephemeral-storage: "3Gi"
 
   affinity:

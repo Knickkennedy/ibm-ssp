@@ -7,7 +7,6 @@ metadata:
     job-name: keycert-handoff-job
   annotations:
     "helm.sh/hook": post-install
-    "helm.sh/hook-weight": "5"
 spec:
   template:
     metadata:
