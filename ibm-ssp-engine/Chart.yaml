@@ -1,0 +1,11 @@
+apiVersion: v2
+appVersion: 1.0.0
+dependencies:
+- alias: sch
+  name: ibm-sch
+  version: ^1.2.18
+- name: ibm-ssp-engine
+  version: 1.2.8
+name: ibm-ssp-engine-umbrella
+type: application
+version: 1.0.0
